@@ -11,8 +11,7 @@ Para este repaso tenéis una carpeta starter_code con todo lo necesario para pra
 Una función es un trozo de código que nos sirve para ejecutar instrucciones en nuestra aplicación, hay muchas formas de escribirlas pero nos vamos a centrar en la más común.
 
 ## ¿Cómo se estructura?
-Una función sigue una estructura muy simple y versátil que nos será de mucha ayuda.
-Haremos la estructura paso a paso:
+Una función sigue una estructura muy simple y versátil que nos será de mucha ayuda. Haremos la estructura paso a paso:
 ```
 function myName
 ```
