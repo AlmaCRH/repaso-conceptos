@@ -1,5 +1,10 @@
 # repaso-conceptos
-(poner aquí el link de html y etc)
+Para este repaso tenéis una carpeta starter_code con todo lo necesario para practicar, pero ojo! tendréis que enlazar al html el archivo script.js:
+```
+<script src="Aquí la ruta del archivo"></script>
+```
+
+
 # Funciones
 
 ## ¿Qué es una función?
@@ -69,3 +74,4 @@ function () {
 }
 ```
 Como véis, la única diferencia a nivel de sintaxis es que no tienen nombre.
+
