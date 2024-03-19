@@ -77,4 +77,25 @@ Como véis, la única diferencia a nivel de sintaxis es que no tienen nombre.
 
 # Scope
 ## ¿Qué es el scope?
-El scope es donde declaramos las variables y hasta donde son accesibles. Por ejemplo, si definimos una variable en el scope global sin estar encerrada entre llaves, como veremos en el siguiente ejemplo
+El scope es donde declaramos las variables y hasta donde son accesibles. Por ejemplo, si definimos una variable en el scope global, sin estar encerrada entre llaves, como veremos en el siguiente ejemplo. Será accesible desde cualquier parte de nuestra aplicación (o archivo js).
+```
+var myGlobalVar = 'Hello World!' //scope global
+```
+Ahora, si declaramos una variable dentro de llaves esta pasará a estar dentro del scope local, el scope local se refiere a todo aquello que esté entre llaves. Aquí un ejemplo.
+```
+var myGlobalVar = 'Hello World!' //scope global
+
+{
+var myLocalScope = 'Hello rebooter' //scope local
+}
+
+if(//your condition goes here){
+var anotherLocalScope = 'Hello people!'
+}
+
+function myFunc(){
+ var anotherOtherLocalVariable = 'Hello? Hello!'
+}
+
+```
+
