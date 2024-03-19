@@ -32,3 +32,22 @@ function myNmae(myParam1, myParam2) {
 
 console.log(myName)
 ```
+Si nos fijamos en la consola de nuestro navegador, nos devuelve function myName(myParam1, myParam2), pero no nos hace el console.log() que tenemos dentro ¿por qué?
+Pues ahí es donde entran los paréntesis, cuando queremos ejecutar lo que hace una función, tenemos que poner el nombre de dicha función y escribir paréntesis seguidamente, esto lo que hará es "activar" la función.
+```
+function myNmae(myParam1, myParam2) {
+  console.log(myParam1, myParam2)
+}
+
+console.log(myName())
+```
+Perooo... ahora nos hace el console.log(), sí, pero no nos muestra nada. Ahí es donde entran los params, cuando invocamos a la función podemos agrerar los datos que queramos y myParam1 y myParam2 copiaran esos valores y los tomaran como suyos. Aquí un ejemplo:
+```
+function myNmae(myParam1, myParam2) {
+  console.log(myParam1, myParam2)
+}
+
+console.log(myName("Alma", "Cruz"))
+//Ahora myParam1 tendrá el valor de "Alma" y myParam2 de "Cruz"
+```
+
