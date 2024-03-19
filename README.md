@@ -75,3 +75,6 @@ function () {
 ```
 Como véis, la única diferencia a nivel de sintaxis es que no tienen nombre.
 
+# Scope
+## ¿Qué es el scope?
+El scope es donde declaramos las variables y hasta donde son accesibles. Por ejemplo, si definimos una variable en el scope global sin estar encerrada entre llaves, como veremos en el siguiente ejemplo
