@@ -50,4 +50,22 @@ function myNmae(myParam1, myParam2) {
 console.log(myName("Alma", "Cruz"))
 //Ahora myParam1 tendrá el valor de "Alma" y myParam2 de "Cruz"
 ```
+Los parámetros pueden tener el nombre que prefieras y puedes añadir tanto como gustes, para diferenciar que valor toma cada parámetro se hace separando los valores con una coma en la llamada. Ahora el console.log() nos mostrará: Alma, Cruz
 
+Ahora imaginémos que tenemos una función que, por si acaso, queremos que en caso de que no le pasemos valores a los parámetros tenga uno predeterminado, para que así siempre pueda mostrar algo.
+```
+function myNmae(myParam1="Adri", myParam2="Suarez") {
+  console.log(myParam1, myParam2)
+}
+
+console.log(myName())
+```
+Ahora, el console.log() mostrará: Adri, Suarez
+
+Y antes de terminar con las funciones, un recordatorio amabale. Las funciones nombres pueden ser llamadas cuantas veces quieras, en cambio aquellas que no tengan nombre solo podrán ser utilizadas una unica vez y en el momento. A estas funciones se les llama anónimmas y tienen la siguiente estructura:
+```
+function () {
+  //Haz algo
+}
+```
+Como véis, la única diferencia a nivel de sintaxis es que no tienen nombre.
