@@ -1,3 +1,8 @@
+#Índice
+- [Funciones](#funciones)
+- [Scope](#scope)
+- [Shadowing](#shadowing)
+- [Arrays](#arrays)
 # Repaso de conceptos
 Para este repaso tenéis una carpeta starter_code con todo lo necesario para practicar, pero ojo! tendréis que enlazar al html el archivo script.js:
 ```
@@ -138,3 +143,5 @@ console.log(myVariable) // Adri
 }
 ```
 Cuando hacemos el console.log() de myVariable dentro de las llaves y queremos acceder al valor del scope global, Javascript se parará en la variable del scope local porque ahí se está redeclarando la variable y opacará el valor anterior. Este fenómeno se llama shadowing.
+
+# Arrays
