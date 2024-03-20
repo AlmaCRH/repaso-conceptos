@@ -1,8 +1,9 @@
-#Índice
+# Índice
 - [Funciones](#funciones)
 - [Scope](#scope)
 - [Shadowing](#shadowing)
 - [Arrays](#arrays)
+  
 # Repaso de conceptos
 Para este repaso tenéis una carpeta starter_code con todo lo necesario para practicar, pero ojo! tendréis que enlazar al html el archivo script.js:
 ```
