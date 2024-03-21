@@ -219,7 +219,7 @@ for(declaración de la variable; condición del bucle; acción)
 
 Una vez visto esto, ahora podemos pasar a lo que ocurre dentro, el console.log() irá mostrando en la consola el valor del índice, al principio será 0 y pasará por todos los numeros hasta llegar a 6, en cuanto llegue a 6, que en este caso es la longitud de nuestra array, la condición pasará a devolver false y se dejará de ejecutar la acción y con ello el console.log()
 ### Ejercicios para repasar arrays
-https://www.codewars.com/kata/511f0fe64ae8683297000001
-https://www.codewars.com/kata/53dc54212259ed3d4f00071c
-https://www.codewars.com/kata/5783d8f3202c0e486c001d23
-https://www.codewars.com/kata/544a54fd18b8e06d240005c0
+- https://www.codewars.com/kata/511f0fe64ae8683297000001
+- https://www.codewars.com/kata/53dc54212259ed3d4f00071c
+- https://www.codewars.com/kata/5783d8f3202c0e486c001d23
+- https://www.codewars.com/kata/544a54fd18b8e06d240005c0
