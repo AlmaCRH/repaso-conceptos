@@ -12,8 +12,6 @@ Para este repaso tenéis una carpeta starter_code con todo lo necesario para pra
 
 
 # Funciones
-
-## ¿Qué es una función?
 Una función es un trozo de código que nos sirve para ejecutar instrucciones en nuestra aplicación, hay muchas formas de escribirlas pero nos vamos a centrar en la más común.
 
 ## ¿Cómo se estructura?
@@ -80,8 +78,10 @@ function () {
 ```
 Como véis, la única diferencia a nivel de sintaxis es que no tienen nombre.
 
+### Ejercicios para repasar funciones
+https://www.codewars.com/kata/523b4ff7adca849afe000035/train/javascript
+
 # Scope
-## ¿Qué es el scope?
 El scope es donde declaramos las variables y hasta donde son accesibles. Por ejemplo, si definimos una variable en el scope global, sin estar encerrada entre llaves, como veremos en el siguiente ejemplo. Será accesible desde cualquier parte de nuestra aplicación (o archivo js).
 ```
 var myGlobalVar = 'Hello World!' //scope global
@@ -124,8 +124,11 @@ console.log(anotherLocalScope) // anotherLocalScope is not defined
 ```
 Visto esto, te habrás dado cuenta de que podemos acceder a las variables globales desde una local pero no al revés, esto es gracias a cómo funciona JavaScript, pero esto nos permite dar paso al siguiente concepto.
 
+### Ejercicios para repasar el scope
+https://www.codewars.com/kata/56d344c7fd3a52566700124b
+https://www.codewars.com/kata/526ec46d6f5e255e150002d1
+
 # Shadowing
-## ¿Qué es el shadowing?
 El shadowing es cuando definimos una variable con el mismo nombre que otra, esto hace que, dependiendo de donde operemos con esa variable, tomará un valor u otro. Aquí un ejemplo.
 ```
 var myVariable = 'Alma'
@@ -146,3 +149,74 @@ console.log(myVariable) // Adri
 Cuando hacemos el console.log() de myVariable dentro de las llaves y queremos acceder al valor del scope global, Javascript se parará en la variable del scope local porque ahí se está redeclarando la variable y opacará el valor anterior. Este fenómeno se llama shadowing.
 
 # Arrays
+Las arrays: [], son un tipo de objetos en JavaScript, nos sirve para almacenar diferentes tipos de datos dentro de ellas. Una array puede tener cualquier tipo de dato dentro suya:
+```
+let myArray = [1, 2, 3, "Hola", {name: 'Alma'}, ["Otra", "array"]]
+```
+Como veis, una array es como una caja a la que le puedes echar cualquier cosa, incluso otras cajas(arrays).
+Esto es sencillo, pero la cosa puede complicarse a la hora de operar con ellas, cómo acceder a los valores y modificar su contenido, ahí entran los métodos de array.
+
+## Añadir o quitar datos de una array
+### .push()
+El método push introducirá el elemento deseado al final de la array
+```
+let myArray = [1, 2, 3, "Hola", {name: 'Alma'}, ["Otra", "array"]]
+
+myArray.push(4)
+
+console.log(myArray) // [1, 2, 3, "Hola", {name: 'Alma'}, ["Otra", "array"], 4] //El valor se añade al final
+```
+### .pop()
+El método de pop nos permite sacar el elemento situado al final de la array
+```
+let myArray = [1, 2, 3, "Hola", {name: 'Alma'}, ["Otra", "array"]]
+
+myArray.pop()
+
+console.log(myArray) // [1, 2, 3, "Hola", {name: 'Alma'}, ["Otra", "array"]] //El elemento del final se elimina
+```
+### .shift()
+shift hace lo mismo que el .pop() pero al principio de la array.
+```
+let myArray = [1, 2, 3, "Hola", {name: 'Alma'}, ["Otra", "array"]]
+
+myArray.shift()
+
+console.log(myArray) // [2, 3, "Hola", {name: 'Alma'}, ["Otra", "array"]] //El elemento del principio se elimina
+```
+### .unshift()
+Igual que el .pop() pero añadiendo el elemento al principio de la array
+```
+let myArray = [1, 2, 3, "Hola", {name: 'Alma'}, ["Otra", "array"]]
+
+myArray.unshift("Hellow world!")
+
+console.log(myArray) // ["Hellow world!", 2, 3, "Hola", {name: 'Alma'}, ["Otra", "array"]] //El elemento se añade al principio de la array
+```
+
+## Accediendo a una array
+Para acceder a una array y obtener el valor deseado tenemos varias maneras, podemos acceder directamente al valor usando el índice. Pero para ello debemos de saber cual es y no siempre sabemos la longitud exacta de una array o si puede cambiar de aquí a un futuro. Para ello, iteramos en base a su longitud.
+```
+let myArray = [1, 2, 3, "Hola", {name: 'Alma'}, ["Otra", "array"]]
+
+myArray[0] // con [0] estamos accediendo al índice 0 del array que pertenece al elemento 1 
+```
+Las arrays comienzan con índice 0, así que si tienen 6 elementos tendrá 5 índices.
+Como dijimos antes, no siempre sabemos con exactitud la cantidad de elementos de una array o si puede cambiar, por eso iteramos en base a su longitud con un bucle for y el método length
+```
+let myArray = [1, 2, 3, "Hola", {name: 'Alma'}, ["Otra", "array"]]
+
+for(let index = 0; index < myArray.length; index++) {
+  console.log(myArray[index])
+}
+```
+Analicemos lo que está pasando en el código. Primero el for se divide en 3 partes:
+for(declaración de la variable; condición del bucle; acción)
+
+- Declaración de la variable: declaramos una variable con el nombre deseado, en este caso hemos usado index para que sea más descriptivo y le asignamos el valor 0.
+- condición del bucle: la condición que queremos que se tenga en cuenta para ejecutar la acción, en el primer ciclo index < myArray.length se traducirá en 0 < 6, como la condición se cumple (devuelve true) la acción se ejecuta
+- Acción, lo que queremos hacer con la variable, normalmente se suma o resta según lo que deseemos.
+
+Una vez visto esto, ahora podemos pasar a lo que ocurre dentro, el console.log() irá mostrando en la consola el valor del índice, al principio será 0 y pasará por todos los numeros hasta llegar a 6, en cuanto llegue a 6, que en este caso es la longitud de nuestra array, la condición pasará a devolver false y se dejará de ejecutar la acción y con ello el console.log()
+### Ejercicios para repasar arrays
+https://www.codewars.com/kata/511f0fe64ae8683297000001
