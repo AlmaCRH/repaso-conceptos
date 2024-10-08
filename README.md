@@ -6,7 +6,7 @@
   
 # Repaso de conceptos
 Para este repaso tenéis una carpeta starter_code con todo lo necesario para practicar, pero ojo! tendréis que enlazar al html el archivo script.js:
-```
+```js
 <script src="Aquí la ruta del archivo"></script>
 ```
 
